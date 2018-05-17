@@ -32,10 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblHitPoints = new System.Windows.Forms.Label();
+            this.lblGold = new System.Windows.Forms.Label();
+            this.lblExperience = new System.Windows.Forms.Label();
+            this.lblLevel = new System.Windows.Forms.Label();
+            this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,57 +75,70 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Level:";
             // 
-            // label5
+            // lblHitPoints
             // 
-            this.label5.AccessibleName = "lblHitPoints";
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(110, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 17);
-            this.label5.TabIndex = 4;
+            this.lblHitPoints.AccessibleName = "";
+            this.lblHitPoints.AutoSize = true;
+            this.lblHitPoints.Location = new System.Drawing.Point(110, 19);
+            this.lblHitPoints.Name = "lblHitPoints";
+            this.lblHitPoints.Size = new System.Drawing.Size(0, 17);
+            this.lblHitPoints.TabIndex = 4;
             // 
-            // label6
+            // lblGold
             // 
-            this.label6.AccessibleName = "lblGold";
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(110, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 17);
-            this.label6.TabIndex = 5;
+            this.lblGold.AccessibleName = "";
+            this.lblGold.AutoSize = true;
+            this.lblGold.Location = new System.Drawing.Point(110, 45);
+            this.lblGold.Name = "lblGold";
+            this.lblGold.Size = new System.Drawing.Size(0, 17);
+            this.lblGold.TabIndex = 5;
             // 
-            // label7
+            // lblExperience
             // 
-            this.label7.AccessibleName = "lblExperience";
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(110, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 17);
-            this.label7.TabIndex = 6;
+            this.lblExperience.AccessibleName = "";
+            this.lblExperience.AutoSize = true;
+            this.lblExperience.Location = new System.Drawing.Point(110, 73);
+            this.lblExperience.Name = "lblExperience";
+            this.lblExperience.Size = new System.Drawing.Size(0, 17);
+            this.lblExperience.TabIndex = 6;
             // 
-            // label8
+            // lblLevel
             // 
-            this.label8.AccessibleName = "lblLevel";
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(110, 99);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 17);
-            this.label8.TabIndex = 7;
+            this.lblLevel.AccessibleName = "";
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Location = new System.Drawing.Point(110, 99);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(0, 17);
+            this.lblLevel.TabIndex = 7;
+            // 
+            // btnTest
+            // 
+            this.btnTest.AccessibleName = "";
+            this.btnTest.Location = new System.Drawing.Point(228, 329);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.TabIndex = 8;
+            this.btnTest.Text = "Test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // SuperAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 643);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnTest);
+            this.Controls.Add(this.lblLevel);
+            this.Controls.Add(this.lblExperience);
+            this.Controls.Add(this.lblGold);
+            this.Controls.Add(this.lblHitPoints);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SuperAdventure";
             this.Text = "My Game";
+            this.Load += new System.EventHandler(this.SuperAdventure_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,10 +150,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblHitPoints;
+        private System.Windows.Forms.Label lblGold;
+        private System.Windows.Forms.Label lblExperience;
+        private System.Windows.Forms.Label lblLevel;
+        private System.Windows.Forms.Button btnTest;
     }
 }
 
