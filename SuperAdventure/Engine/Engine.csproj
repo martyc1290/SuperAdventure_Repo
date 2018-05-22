@@ -50,6 +50,7 @@
     <Compile Include="Quest.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="MacTest.cs" />
+    <Compile Include="Boss.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

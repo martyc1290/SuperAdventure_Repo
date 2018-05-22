@@ -24,15 +24,12 @@ namespace SuperAdventure
             // This is the constructor for the class, gets called when we create a new ofject of the class - in this case, the form
             InitializeComponent();
 
+            // Now using the default constructor of Location
+			Location location = new Location(1, "Home", "This is your house.");
+            
             // Creates a new Player object, and assigns it to the object _player
-            _player = new Player();
-
-            // Assign values to the properties of the _player object
-            _player.CurrentHitPoints = 10;
-            _player.MaximumHitPoints = 10;
-            _player.Gold = 20;
-            _player.ExperiencePoints = 0;
-            _player.Level = 1;
+            // Assign values to the properties of the _player object using the Constructor created in the Player class
+			_player = new Player(10, 10, 20, 0,1);
 
             // Get the values of the properties of the _player object and assign them to the labels on screen
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();

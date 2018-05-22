@@ -13,5 +13,14 @@ namespace Engine
         // These are the properties of the HealingPotion class
         // All public properties and methods from the Item class now automatically show up in HealingPotion class
         public int AmountToHeal { get; set; }
+
+		// This is the constructor for the Healing Potion class
+        // The second part of this constructor takes values from the parameters in the Healing Potion Class
+        // and passes them on to the constructor of the Item class
+		public HealingPotion(int id, string name, string namePlural,
+		                     int amountToHeal) : base(id, name, namePlural)
+		{
+			AmountToHeal = amountToHeal;
+		}
     }
 }

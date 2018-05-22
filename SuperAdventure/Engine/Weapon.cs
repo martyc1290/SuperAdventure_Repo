@@ -14,5 +14,13 @@ namespace Engine
         // All public properties and methods from the Item class now automatically show up in Weapon class
         public int MinimumDamage { get; set; }
         public int MaximumDamage { get; set; }
+
+        // This is the constructor of the Weapon class
+		public Weapon(int id, string name, string namePlural, int minimumDamage,
+		              int maximumDamage): base(id, name, namePlural)
+		{
+			MinimumDamage = minimumDamage;
+			MaximumDamage = maximumDamage;
+		}
     }
 }
