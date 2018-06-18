@@ -8,11 +8,13 @@ namespace Engine
 {
     public static class World
     {
-        public static readonly List<Item> Items = new List<Item>();
+        // Static list variables
+		public static readonly List<Item> Items = new List<Item>();
         public static readonly List<Monster> Monsters = new List<Monster>();
         public static readonly List<Quest> Quests = new List<Quest>();
         public static readonly List<Location> Locations = new List<Location>();
 
+        // Constants
         public const int ITEM_ID_RUSTY_SWORD = 1;
         public const int ITEM_ID_RAT_TAIL = 2;
         public const int ITEM_ID_PIECE_OF_FUR = 3;
@@ -41,6 +43,8 @@ namespace Engine
         public const int LOCATION_ID_BRIDGE = 8;
         public const int LOCATION_ID_SPIDER_FIELD = 9;
 
+        // Static constructor
+        // The constructor code is run the first time someone uses anything in the class
         static World()
         {
             PopulateItems();
@@ -49,6 +53,7 @@ namespace Engine
             PopulateLocations();
         }
 
+        // The following methods create the game objects and add them to the static lists
         private static void PopulateItems()
         {
             Items.Add(new Weapon(ITEM_ID_RUSTY_SWORD, "Rusty sword", "Rusty swords", 0, 5));
@@ -166,6 +171,7 @@ namespace Engine
             Locations.Add(spiderField);
         }
 
+        // These methods are ones we can call to get values from the static lists
         public static Item ItemByID(int id)
         {
             foreach(Item item in Items)
