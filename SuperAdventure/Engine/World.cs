@@ -54,6 +54,9 @@ namespace Engine
         }
 
         // The following methods create the game objects and add them to the static lists
+        // Private means that this method can only be run by other code inside this Class
+        // Static allows you to run a method without instantiating an object from the Class
+        // Void means that this method is not going to return a value
         private static void PopulateItems()
         {
             Items.Add(new Weapon(ITEM_ID_RUSTY_SWORD, "Rusty sword", "Rusty swords", 0, 5));
@@ -172,6 +175,10 @@ namespace Engine
         }
 
         // These methods are ones we can call to get values from the static lists
+        // This method is public because it will be called from other parts of the game
+        // This method is still static since this class is never an object
+        // Instead of void, this method is going to return a value, and in this case the datatype of that value is Item
+        // This method also accepts parameters in the parantheses
         public static Item ItemByID(int id)
         {
             foreach(Item item in Items)
