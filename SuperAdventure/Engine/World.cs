@@ -181,7 +181,8 @@ namespace Engine
         // This method also accepts parameters in the parantheses
         public static Item ItemByID(int id)
         {
-            foreach(Item item in Items)
+            // foreach(DataType variableName in listName)
+            foreach (Item item in Items)
             {
                 if(item.ID == id)
                 {
