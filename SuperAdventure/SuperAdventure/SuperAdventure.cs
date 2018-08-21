@@ -60,7 +60,7 @@ namespace SuperAdventure
 
         private void btnWest_Click(object sender, EventArgs e)
         {
-            MoveTo(_player.CurrentLocation.LocationToSouth);
+            MoveTo(_player.CurrentLocation.LocationToWest);
         }
 
         private void MoveTo(Location newLocation)
